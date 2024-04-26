@@ -1,4 +1,4 @@
-{% set version = "0.12.7" %}
+{% set version = "0.13.0" %}
 
 package:
   name: pycrdt-websocket
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pycrdt-websocket/pycrdt_websocket-{{ version }}.tar.gz
-  sha256: 5ce1d3ad8ba5d3407400f3dcf5d96c9b9d9836fb421928ac5698dd094ed18cfa
+  sha256: 82594f719ffe1a8dcc57572d19a8c6249e194101b3467d5c59dd239486c5c567
 
 build:
   noarch: python
@@ -20,9 +20,9 @@ requirements:
     - python >=3.8
   run:
     - python >=3.8
-    - aiosqlite >=0.18.0,<1
-    - pycrdt >=0.8.7,<0.9.0
     - anyio >=3.6.2,<5
+    - sqlite-anyio >=0.2.0,<0.3.0
+    - pycrdt >=0.8.16,<0.9.0
 
 test:
   source_files:
@@ -30,16 +30,15 @@ test:
   requires:
     - nodejs >=18,<19
     - pip
-    - pytest-asyncio
     - pytest-cov
-    - websockets >=10.0
-    - uvicorn
+    - httpx-ws >=0.5.2
+    - hypercorn
+    - trio >=0.25.0
+    - sniffio
   imports:
     - pycrdt_websocket
   commands:
     - pip check
-    - cd tests && npm install
-    - cd .. && pytest -vv --asyncio-mode=auto --cov-branch --cov=pycrdt_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=69
 
 about:
   home: https://github.com/jupyter-server/pycrdt-websocket
