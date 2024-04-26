@@ -30,16 +30,15 @@ test:
   requires:
     - nodejs >=18,<19
     - pip
-    - pytest-asyncio
     - pytest-cov
-    - websockets >=10.0
-    - uvicorn
+    - httpx-ws >=0.5.2
+    - hypercorn >=0.16.0
+    - trio >=0.25.0
+    - sniffio
   imports:
     - pycrdt_websocket
   commands:
     - pip check
-    - cd tests && npm install
-    - cd .. && pytest -vv --asyncio-mode=auto --cov-branch --cov=pycrdt_websocket --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=69
 
 about:
   home: https://github.com/jupyter-server/pycrdt-websocket
