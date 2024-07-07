@@ -1,4 +1,4 @@
-{% set version = "0.14.0" %}
+{% set version = "0.14.1" %}
 
 package:
   name: pycrdt-websocket
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pycrdt-websocket/pycrdt_websocket-{{ version }}.tar.gz
-  sha256: a7ce4b5fbc58746208059d7cfd94d24e42e09cb73da24949600d05a4741b031c
+  sha256: 383c58e5dddb393ac66246a67eceae5f6e76bffb426dbe02e0360dfc4a61101a
 
 build:
   noarch: python
