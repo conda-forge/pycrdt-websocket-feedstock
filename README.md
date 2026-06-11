@@ -3,11 +3,13 @@ About pycrdt-websocket-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pycrdt-websocket-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/y-crdt/pycrdt-websocket
+Home: https://pypi.org/project/pycrdt-websocket
 
 Package license: MIT
 
 Summary: WebSocket connector for pycrdt
+
+Development: https://github.com/y-crdt/pycrdt-websocket
 
 Documentation: https://y-crdt.github.io/pycrdt-websocket
 
