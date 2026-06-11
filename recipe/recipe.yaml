@@ -42,6 +42,7 @@ tests:
         - channels
         - httpx-ws >=0.5.2
         - hypercorn >=0.16.0
+        - nodejs 24.*
         - pytest-timeout
         - python ${{ python_min }}.*
         - sniffio
@@ -50,7 +51,8 @@ tests:
       source:
         - tests/
     script:
-      - pytest -vv --tb=long --color=yes
+      - cd tests && npm install --ignore-scripts && cd ..
+      - pytest -vv --tb=long --color=yes --timeout=60
 
 about:
   license: MIT
