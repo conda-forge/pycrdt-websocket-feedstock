@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "0.16.4"
+  version: "0.16.5"
   python_check_max: "3.14"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pycrdt-websocket/pycrdt_websocket-${{ version }}.tar.gz
-  sha256: 6d90f36f4a1d51b3736caf8698fc3745ff44bb20cb820ff0033bfc76d4737da9
+  sha256: bda0b9ad31468a9d664464fc28c1b112cfde274065eb75844aa19950fb59d282
 
 build:
   number: 0
